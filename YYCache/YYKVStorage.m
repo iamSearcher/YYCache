@@ -137,6 +137,7 @@ static UIApplication *_YYSharedApplication() {
             free(valuesRef);
             CFRelease(_dbStmtCache);
         }
+        _dbStmtCache = NULL;
     } else {
         if (_dbStmtCache) CFRelease(_dbStmtCache);
         _dbStmtCache = NULL;
