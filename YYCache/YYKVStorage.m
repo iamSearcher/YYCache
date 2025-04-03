@@ -145,7 +145,7 @@ static UIApplication *_YYSharedApplication() {
     
     do {
         retry = NO;
-        result = sqlite3_close(_db);
+        result = sqlite3_close_v2(_db);
         if (result == SQLITE_BUSY || result == SQLITE_LOCKED) {
             if (!stmtFinalized) {
                 stmtFinalized = YES;
